@@ -1,0 +1,1114 @@
+/* Import the new font */
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+
+/* Define the new color palette */
+:root {
+  --primary-color: #C33159;
+  --secondary-color: #D85D7B;
+  --tertiary-color: #EA8196;
+  --quaternary-color: #F2A0AE;
+  --quinary-color: #F3BEBF;
+  --background-color: #ffffff; /* Adjust as needed */
+  --default-font: 'Della Respira', serif;
+}
+
+/* General styles */
+body {
+  font-family: var(--default-font);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+/* Header styles */
+.header {
+  color: var(--quinary-color);
+  padding: 10px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  
+}
+.header.scrolled {
+  background: #000; /* Add background when scrolled */
+}
+
+
+
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 36px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.header .logo span {
+  color: var(--secondary-color);
+  font-size: 32px;
+}
+
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--quinary-color);
+  font-size: 14px;
+  padding: 8px 30px;
+  margin: 0 0 0 30px;
+  border-radius: 4px;
+  transition: 0.3s;
+  border: 2px solid var(--tertiary-color);
+}
+
+.header .btn-getstarted:hover,
+.header .btn-getstarted:focus:hover {
+  color: var(--primary-color);
+  background: var(--tertiary-color);
+}
+
+/* Nav Menu */
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navmenu li {
+  position: relative;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--quinary-color);
+  padding: 18px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--tertiary-color);
+}
+
+.mobile-nav-toggle {
+  color: var(--quinary-color);
+  font-size: 28px;
+  line-height: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Hide navigation menu on mobile */
+@media (max-width: 768px) {
+  .header .navmenu,
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
+/* New Hero Section CSS */
+#hero {
+  width: 100%;
+  height: 100vh; /* Ensure the hero section takes full viewport height */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* Ensure background color is set */
+  background-image: url('assets/The Wellhall-2/1.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* White text color */
+  font-family: 'Della Respira', serif; /* Use the Della Respira font */
+  animation: zoomIn 20s infinite linear; /* Add zoom-in animation */
+}
+
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5); /* Add a darker semi-transparent overlay */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for a lifting effect */
+  animation: fadeInUp 1s ease-in-out; /* Add fade-in animation */
+  color: #fff; /* Set to white color */
+}
+
+#hero p {
+  font-size: 1.5rem;
+  font-weight: bold; /* Make the text bold */
+  margin: 0;
+  color: #fff; /* Set to white color */
+  animation: fadeInUp 1.5s ease-in-out; /* Add fade-in animation */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for zoom-in animation */
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive adjustments for Hero Section */
+@media (max-width: 768px) {
+  #hero {
+    height: auto;
+    padding: 100px 20px; /* Add padding for smaller devices */
+  }
+
+  #hero h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile devices */
+  }
+
+  #hero p {
+    font-size: 1.2rem; /* Smaller font size for mobile devices */
+  }
+}
+
+/* Nav Menu */
+.navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navmenu li {
+  position: relative;
+}
+
+.navmenu a,
+.navmenu a:focus {
+  color: var(--quinary-color);
+  padding: 18px 15px;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--tertiary-color);
+}
+
+.mobile-nav-toggle {
+  color: var(--quinary-color);
+  font-size: 28px;
+  line-height: 0;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Responsive adjustments for Nav Menu */
+@media (max-width: 768px) {
+  .navmenu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navmenu li {
+    margin-bottom: 10px;
+  }
+
+  .navmenu a {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+}
+/* About Section */
+#about {
+  background-color: var(--background-color); /* Use background color from palette */
+  color: var(--primary-color); /* Main text color */
+  padding: 60px 0;
+  font-family: var(--default-font);
+}
+
+#about .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about .section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#about .section-title p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+#about .content {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for contrast */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Ensure the pseudo-elements stay within the content box */
+}
+
+#about img {
+  width: 80%; /* Reduce the size of the image */
+  max-width: 400px; /* Ensure the image does not get too large */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: none; /* Ensure there is no blur filter applied */
+  animation: scrapbookAnimation 1s ease-in-out;
+}
+
+#about .content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--tertiary-color);
+  margin-bottom: 1rem;
+}
+
+#about .content h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px;
+}
+
+/* Scrapbook animation for the image and content box */
+@keyframes scrapbookAnimation {
+  0% {
+    transform: scale(0.8) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* Remove unwanted borders */
+#about .content::before,
+#about .content::after {
+  content: '';
+  position: absolute;
+  border: none; /* Remove borders */
+  z-index: 1;
+  pointer-events: none; /* Ensures the pseudo-elements don't interfere with interactions */
+}
+
+#about .content::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  transform: rotate(-2deg);
+}
+
+#about .content::after {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  transform: rotate(2deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  #about .section-title h2 {
+    font-size: 2rem; /* Slightly smaller font size for tablets */
+  }
+
+  #about .content {
+    padding: 1.5rem; /* Slightly reduce padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  #about {
+    padding: 30px 0; /* Reduce padding for mobile devices */
+  }
+
+  #about .section-title h2 {
+    font-size: 1.75rem; /* Smaller font size for mobile devices */
+  }
+
+  #about .content {
+    padding: 1rem; /* Reduce padding for mobile devices */
+  }
+
+  #about .content p {
+    font-size: 0.9rem; /* Smaller font size for mobile devices */
+  }
+
+  #about img {
+    width: 100%; /* Make image full width for mobile devices */
+    max-width: 100%; /* Ensure the image does not exceed the container */
+  }
+}
+/* Projects Section */
+#projects {
+  background-color: var(--background-color); /* Use background color from palette */
+  color: var(--primary-color); /* Main text color */
+  padding: 60px 0;
+  font-family: var(--default-font);
+}
+
+#projects .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#projects .section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff; /* White color for headings */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#projects .section-title p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+#projects .service-item {
+  background-color: #ffffff; /* White background for service items */
+  text-align: center;
+  border: 1px solid var(--primary-color); /* Border color from palette */
+  padding: 40px 20px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#projects .service-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+#projects .service-item .icon {
+  background: var(--primary-color);
+  color: var(--quinary-color);
+  margin: 0 auto 20px auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+#projects .service-item .icon i {
+  font-size: 32px;
+}
+
+#projects .service-item h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #C33159; /* Dark pink color for titles */
+}
+
+#projects .service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #D85D7B; /* Dark pink color for descriptions */
+  flex-grow: 1;
+}
+
+#projects .service-item a {
+  color: var(--quaternary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#projects .service-item a:hover {
+  color: var(--quinary-color);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  #projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #projects .col-lg-4, #projects .col-md-6 {
+    flex: 1 1 calc(33.333% - 30px); /* Adjust the width of the columns */
+    margin: 15px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #projects .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #projects .col-lg-4, #projects .col-md-6 {
+    flex: 1 1 100%; /* Full width on mobile devices */
+    margin: 15px 0; /* Vertical margin between items */
+  }
+}
+/* Experience Section */
+#experience {
+  background-color: var(--background-color); /* Use background color from palette */
+  color: var(--primary-color); /* Main text color */
+  padding: 60px 0;
+  font-family: var(--default-font);
+}
+
+#experience .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#experience .section-title h2 {
+  font-size: 2rem; /* Consistent font size */
+  font-weight: bold;
+  color: #ffffff; /* White color for main heading */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#experience .section-title p {
+  font-size: var(--font-size-medium); /* Consistent font size */
+  color: var(--secondary-color);
+}
+
+#experience .features-item {
+  background-color: #ffffff; /* White background for features items */
+  padding: 20px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  margin-bottom: 20px; /* Increased margin for better spacing */
+  color: #C33159; /* Dark pink color for text inside the boxes */
+  text-align: left; /* Uniform alignment for text */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; /* Ensures all boxes take equal height */
+}
+
+#experience .features-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+#experience .features-item h4 {
+  font-size: var(--font-size-medium); /* Consistent font size */
+  font-weight: bold;
+  color: #C33159; /* Dark pink color for headings */
+  margin-bottom: 10px;
+}
+
+#experience .features-item h5 {
+  font-size: var(--font-size-small); /* Consistent font size */
+  font-weight: normal;
+  color: #C33159; /* Dark pink color for subheadings */
+  margin-bottom: 10px;
+}
+
+#experience .features-item p {
+  font-size: var(--font-size-small); /* Consistent font size */
+  line-height: 1.6;
+  color: #C33159; /* Dark pink color for paragraph text */
+}
+
+#experience .features-item .icon {
+  font-size: 2rem;
+  color: #C33159; /* Dark pink color for icons */
+  margin-right: 10px;
+}
+
+#experience .features-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#experience .features-image img {
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* Reduce the height of the image */
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  transition: transform 0.3s ease-in-out; /* Add smooth transition for zoom effect */
+}
+
+#experience .features-image img:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+}
+
+/* Responsive adjustments */
+@media (min-width: 992px) {
+  #experience .row {
+    display: flex;
+    align-items: stretch; /* Ensure children elements stretch to the same height */
+  }
+
+  #experience .col-lg-6 {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #experience .features-image, #experience .col-lg-6 {
+    flex: 1; /* Ensure equal height for both columns */
+  }
+}
+
+@media (max-width: 768px) {
+  #experience .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #experience .col-lg-6, #experience .features-image {
+    flex: 1 1 100%; /* Full width on mobile devices */
+    padding: 0 15px;
+  }
+
+  #experience .features-item {
+    margin-bottom: 20px; /* Add margin between items */
+  }
+}
+
+/* Technical Toolkit Section */
+#technical-toolkit {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 60px 0;
+  font-family: var(--default-font);
+}
+
+#technical-toolkit .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#technical-toolkit .section-title h2 {
+  font-size: 2rem;
+  /* Consistent font size */
+  font-weight: bold;
+  color: white; /* Change heading color to white */
+  margin-bottom: 20px;
+}
+
+#technical-toolkit .section-title p {
+  font-size: var(--font-size-medium); /* Consistent font size */
+  color: var(--secondary-color);
+}
+
+.toolkit-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.toolkit-box {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 calc(30% - 40px); /* Adjust box size for larger screens */
+  max-width: calc(30% - 40px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.toolkit-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.toolkit-box .category-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.toolkit-box h3 {
+  margin: 10px 0;
+  font-size: var(--font-size-medium); /* Consistent font size */
+  color: var(--primary-color);
+}
+
+.toolkit-box p {
+  margin: 0;
+  font-size: var(--font-size-small); /* Consistent font size */
+  color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .toolkit-box {
+    flex: 1 1 calc(45% - 40px); /* Adjust box size for tablets */
+    max-width: calc(45% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .toolkit-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toolkit-box {
+    flex: 1 1 100%; /* Full width on mobile devices */
+    max-width: 100%;
+    margin-bottom: 20px; /* Add margin between boxes */
+  }
+}
+/* Testimonials Section */
+#testimonials {
+  background-color: rgba(255, 228, 225, 0.5); /* Light pink background with more transparency */
+  color: #C33159; /* Dark pink text color */
+  padding: 60px 0;
+  font-family: var(--default-font);
+  position: relative;
+  overflow: hidden; /* Ensure no horizontal scrolling */
+}
+
+#testimonials:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#testimonials .testimonials-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#testimonials .container {
+  position: relative;
+  z-index: 2;
+}
+
+#testimonials .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#testimonials .section-title h2 {
+  font-size: 2rem; /* Consistent font size */
+  font-weight: bold;
+  color: #fff; /* White color for heading */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials .section-title p {
+  font-size: var(--font-size-medium); /* Consistent font size */
+  color: #C33159; /* Dark pink text color for subtitle */
+}
+
+#testimonials .swiper-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden; /* Ensure no horizontal scrolling */
+}
+
+#testimonials .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonials .testimonial-item {
+  text-align: center;
+  padding: 20px; /* Adjusted padding for better text fit */
+  background-color: #fff; /* White background for testimonials */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; /* Added margin for spacing between boxes */
+  width: 360px; /* Increased width for uniformity */
+  height: 400px; /* Increased height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to start */
+  align-items: center;
+  overflow: hidden; /* Ensure text fits inside the box */
+  text-overflow: ellipsis; /* Handle overflowing text with ellipsis */
+}
+
+#testimonials .testimonial-item .testimonial-img {
+  width: 100px; /* Increased size */
+  border-radius: 50%;
+  margin: 0 auto 10px auto;
+  border: 4px solid #C33159; /* Dark pink border for testimonial image */
+}
+
+#testimonials .testimonial-item h3 {
+  font-size: var(--font-size-medium); /* Consistent font size */
+  font-weight: bold;
+  color: #C33159; /* Dark pink color for names */
+  margin: 10px 0;
+}
+
+#testimonials .testimonial-item p {
+  font-size: var(--font-size-small); /* Consistent font size */
+  line-height: 1.4;
+  color: #C33159; /* Dark pink color for text */
+  font-style: italic;
+  margin: 0;
+  overflow: hidden; /* Ensure text fits inside the box */
+  text-overflow: ellipsis; /* Handle overflowing text with ellipsis */
+}
+
+#testimonials .swiper-pagination-bullet {
+  background: #C33159; /* Dark pink color for pagination bullets */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #testimonials .testimonial-item {
+    width: 100%; /* Full width on mobile devices */
+    max-width: 100%;
+    padding: 15px; /* Adjusted padding for better fit on mobile */
+  }
+}
+/* Call To Action Section */
+#connect {
+  background-color: var(--background-color); /* Use background color from palette */
+  color: var(--primary-color); /* Main text color */
+  padding: 60px 0;
+  font-family: var(--default-font);
+  position: relative;
+}
+
+#connect img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#connect:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.3); /* Add a semi-transparent overlay */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#connect .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+#connect .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#connect .section-title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff; /* White color for heading */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#connect .section-title p {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+#connect form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); /* White translucent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#connect form .form-control {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  color: var(--primary-color);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#connect form .form-control:focus {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+}
+
+#connect form button,
+#connect form .resume-button {
+  background-color: var(--secondary-color); /* Dark pink background */
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #fff; /* White text color */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 10px; /* Added margin for spacing */
+  display: inline-block; /* Ensure buttons are inline */
+  text-decoration: none; /* Remove underline */
+}
+
+#connect form button:hover,
+#connect form .resume-button:hover {
+  background-color: #b5294a; /* Slightly darker pink on hover */
+  color: #fff;
+}
+
+/* Social Icons */
+#connect .icons a {
+  color: #fff; /* White color for icons */
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+#connect .icons a:hover {
+  color: var(--secondary-color); /* Dark pink on hover */
+}
+
+/* Footer */
+#connect .footer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#connect .footer .icons a {
+  color: #fff; /* White color for icons */
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+#connect .footer .icons a:hover {
+  color: var(--secondary-color); /* Dark pink on hover */
+}
+
+#connect .footer .copyright {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* Arrow at bottom */
+#connect .scroll-top {
+  position: absolute;
+  bottom: 50px; /* Move arrow down slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff; /* Initial color set to dark pink */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#connect .scroll-top:hover {
+  color: #; /* Change to white on hover */
+}
+
+/* Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navmenu a {
+    padding: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  #connect form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #connect form .form-control {
+    font-size: 1rem;
+  }
+
+  #connect form button,
+  #connect form .resume-button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .icons a {
+    font-size: 20px;
+  }
+}
+
+/* Tablet (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navmenu ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .navmenu a {
+    padding: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  #connect form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #connect form .form-control {
+    font-size: 1.2rem;
+  }
+
+  #connect form button,
+  #connect form .resume-button {
+    width: auto;
+    margin: 5px;
+  }
+
+  .icons a {
+    font-size: 22px;
+  }
+}
+
+/* Desktop (769px and up) */
+@media (min-width: 769px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .navmenu ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .navmenu a {
+    padding: 10px 15px;
+  }
+
+  .section-title h2 {
+    font-size: 2.5rem;
+  }
+
+  #connect form {
+    width: 70%;
+    padding: 25px;
+  }
+
+  #connect form .form-control {
+    font-size: 1.2rem;
+  }
+
+  #connect form button,
+  #connect form .resume-button {
+    width: auto;
+    margin: 10px;
+  }
+
+  .icons a {
+    font-size: 24px;
+  }
+}
